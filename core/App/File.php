@@ -11,7 +11,7 @@ class File
     private $name;
     private $target;
     private $mimeType;
-    private $acceptedMimeTypes = ["image/jpg","image/jpeg", "image/png", "image/gif"];
+    private $acceptedMimeTypes = ["images/jpg","images/jpeg", "images/png", "images/gif"];
 
     public function __construct($index)
     {

@@ -73,15 +73,15 @@ class JeuxController extends AbstractController
 
         if($title && $content){
 
-            $image = new File("imageJeux");
-            if($image->isImage()){
-                $image->upload();
+            $images = new File("imageJeux");
+            if($images->isImage()){
+                $images->upload();
             }
 
             $jeux = new Jeux();
             $jeux->setTitle($title);
             $jeux->setContent($content);
-            $jeux->setImage($image->getName());
+            $jeux->setImage($images->getName());
 
             $idJeux = $this->repository->insert($jeux);
 
@@ -112,7 +112,7 @@ class JeuxController extends AbstractController
 
         $id = null;
         $title = null;
-        $image = null;
+        $images = null;
         $content = null;
 
         if(!empty($_POST['idUpdate']) && ctype_digit($_POST['idUpdate'])) {$id = $_POST['idUpdate'];}

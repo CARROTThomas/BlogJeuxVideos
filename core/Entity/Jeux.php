@@ -13,7 +13,7 @@ class Jeux extends AbstractEntity
     private int $id;
     private string $title;
     private string $content;
-    private string $image;
+    private string $images;
 
     /**
      * @return int
@@ -60,14 +60,14 @@ class Jeux extends AbstractEntity
      */
     public function getImage(): string
     {
-        return $this->image;
+        return $this->images;
     }
 
     /**
-     * @param string $image
+     * @param string $images
      */
-    public function setImage(string $image): void
+    public function setImage(string $images): void
     {
-        $this->image = $image;
+        $this->images = $images;
     }
 }

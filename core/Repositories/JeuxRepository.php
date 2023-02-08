@@ -10,12 +10,12 @@ class JeuxRepository extends AbstractRepository
 {
     public function insert(Jeux $jeux){
 
-        $query = $this->pdo->prepare("INSERT INTO {$this->tableName} SET title = :title, content = :content, image=:image ");
+        $query = $this->pdo->prepare("INSERT INTO {$this->tableName} SET title = :title, content = :content, images=:images ");
 
         $query->execute([
             "title"=>$jeux->getTitle(),
             "content"=>$jeux->getContent(),
-            "image"=>$jeux->getImage()
+            "images"=>$jeux->getImage()
         ]);
         return $this->pdo->lastInsertId();
     } // marche
