@@ -37,9 +37,6 @@ class AbstractRepository
         $attributes = $reflect->getAttributes(TargetEntity::class);
 
        return $attributes[0]->getArguments()["entityName"];
-
-
-
     }
 
     protected function resolveTableName(){

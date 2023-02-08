@@ -4,9 +4,6 @@ namespace App;
 
 class File
 {
-
-
-
     private $uploadDirectory;
     private $fileData;
     private $extension;

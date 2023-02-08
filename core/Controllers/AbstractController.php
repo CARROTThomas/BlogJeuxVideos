@@ -13,19 +13,14 @@ class AbstractController
 
     protected $usesEntity = true;
 
-
     protected $repository;
 
     public function __construct()
     {
-
-
-            $this->usesEntity =$this->resolveUsesEntity();
-
+        $this->usesEntity =$this->resolveUsesEntity();
 
         if($this->usesEntity){
             $this->repository = $this->getRepository($this->resolveDefaultEntityName());
-
         }
     }
 
