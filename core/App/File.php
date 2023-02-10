@@ -11,7 +11,7 @@ class File
     private $name;
     private $target;
     private $mimeType;
-    private $acceptedMimeTypes = ["images/jpg","images/jpeg", "images/png", "images/gif"];
+    private $acceptedMimeTypes = ["image/jpg","image/jpeg", "image/png", "image/gif"];
 
     public function __construct($index)
     {
@@ -31,11 +31,7 @@ class File
     }
 
     public function upload(){
-
-
             move_uploaded_file($this->tempFile, $this->target);
-
-
     }
 
     /**

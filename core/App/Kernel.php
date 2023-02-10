@@ -4,6 +4,11 @@ namespace App;
 
 class Kernel
 {
+
+    /*
+     * voir la doc -> home
+     * voir le site -> jeux
+     */
     public static function run(){
 
         $type = "jeux";
